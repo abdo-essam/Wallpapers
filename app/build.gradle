@@ -2,10 +2,9 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
-
 android {
     namespace 'com.example.wallpapersapp'
-    compileSdk 34
+    compileSdkVersion  34
 
     defaultConfig {
         applicationId "com.example.wallpapersapp"

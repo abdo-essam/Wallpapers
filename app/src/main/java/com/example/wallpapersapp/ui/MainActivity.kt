@@ -1,4 +1,4 @@
-package com.example.wallpapersapp
+package com.example.wallpapersapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

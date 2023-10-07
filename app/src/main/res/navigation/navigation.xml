@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/wallpaperListFragment"
-        android:name="com.example.wallpapersapp.WallpaperListFragment"
+        android:name="com.example.wallpapersapp.ui.fragments.WallpaperListFragment"
         android:label="fragment_wallpaper_list"
         tools:layout="@layout/fragment_wallpaper_list" />
 </navigation>
