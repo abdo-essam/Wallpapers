@@ -12,12 +12,14 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions
 import com.example.wallpapersapp.R
 import com.example.wallpapersapp.databinding.ItemRecyclerViewBinding
 import com.example.wallpapersapp.model.Photo
+import io.trbl.blurhash.BlurHash
 
 class RecyclerViewAdapter(): PagingDataAdapter<Photo, RecyclerViewAdapter.MyViewHolder>(DiffUtilCallBack()) {
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
         private val binding = ItemRecyclerViewBinding.bind(view)
 
         fun bind(data: Photo) {
+
             Glide.with(itemView.context)
                 .asBitmap()
                 .load(data.src.large)

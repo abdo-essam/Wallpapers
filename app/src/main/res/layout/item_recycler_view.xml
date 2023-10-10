@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_2sdp"
-        app:cardBackgroundColor="@color/background_color"
+        app:cardBackgroundColor="@color/black"
         android:focusable="true"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="@dimen/_10sdp">
+        app:cardCornerRadius="@dimen/_7sdp">
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_280sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_200sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription"
             android:scaleType="centerCrop"
-            android:focusable="true"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="Wallpaper" />
+            tools:srcCompat="@tools:sample/avatars"
+            android:focusable="true"/>
 
     </androidx.cardview.widget.CardView>
 

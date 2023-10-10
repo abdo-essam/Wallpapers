@@ -14,9 +14,9 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class WallpaperListFragment : Fragment() {
 
-    private val tabTitles = listOf("Home","Popular","Random","Categories")
+    private val tabTitles = listOf("Home","Categories")
     private val fragments = listOf(
-        HomeFragment(), PopularFragment(), RandomFragment(),
+        HomeFragment(),
         CategoriesFragment()
     )
     private lateinit var binding: FragmentWallpaperListBinding
@@ -31,7 +31,6 @@ class WallpaperListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentWallpaperListBinding.inflate(layoutInflater,container,false)
-
         return binding.root
     }
 
