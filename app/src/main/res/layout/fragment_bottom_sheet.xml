@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.BottomSheetFragment">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/bottom_sheets_menu"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/downLoadFromNet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_7sdp"
+        android:padding="8dp"
+        android:text="@string/download_image"
+        android:textSize="@dimen/_14ssp"
+        app:drawableStartCompat="@drawable/ic_fab_download_button" />
+
+
+    <TextView
+        android:id="@+id/setAsBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_7sdp"
+        android:padding="8dp"
+        android:text="@string/set_as_background"
+        android:textSize="@dimen/_14ssp"
+        app:drawableStartCompat="@drawable/baseline_wallpaper_24" />
+
+    <TextView
+        android:id="@+id/setAsLockscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_7sdp"
+        android:padding="8dp"
+        android:text="@string/set_as_lockscreen"
+        android:textSize="@dimen/_14ssp"
+        app:drawableStartCompat="@drawable/baseline_lock_open_24" />
+
+</LinearLayout>

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Wallpapers App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="categories">Categories</string>
+    <string name="set_as_background">Set as Background</string>
+    <string name="set_as_lockscreen">Set as Lockscreen</string>
+    <string name="download_image">Download</string>
 </resources>

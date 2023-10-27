@@ -1,6 +1,7 @@
 package com.example.wallpapersapp.ui.recyclerView
 
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,14 +13,12 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions
 import com.example.wallpapersapp.R
 import com.example.wallpapersapp.databinding.ItemRecyclerViewBinding
 import com.example.wallpapersapp.model.Photo
-import io.trbl.blurhash.BlurHash
 
-class RecyclerViewAdapter(): PagingDataAdapter<Photo, RecyclerViewAdapter.MyViewHolder>(DiffUtilCallBack()) {
+class RecyclerViewAdapter(private val listener: WallpaperInteractionListener): PagingDataAdapter<Photo, RecyclerViewAdapter.MyViewHolder>(DiffUtilCallBack()) {
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
         private val binding = ItemRecyclerViewBinding.bind(view)
 
         fun bind(data: Photo) {
-
             Glide.with(itemView.context)
                 .asBitmap()
                 .load(data.src.large)
@@ -27,6 +26,10 @@ class RecyclerViewAdapter(): PagingDataAdapter<Photo, RecyclerViewAdapter.MyView
                 .transition(BitmapTransitionOptions.withCrossFade(80))
                 .error(R.drawable.baseline_error_24)
                 .into(binding.imageView)
+
+            binding.imageView.setOnClickListener {
+                listener.onClickItem(data, it)
+            }
         }
 
     }
@@ -42,7 +45,7 @@ class RecyclerViewAdapter(): PagingDataAdapter<Photo, RecyclerViewAdapter.MyView
 
     class DiffUtilCallBack: DiffUtil.ItemCallback<Photo>() {
         override fun areItemsTheSame(oldItem: Photo, newItem: Photo): Boolean {
-            return oldItem == newItem
+            return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
@@ -50,4 +53,8 @@ class RecyclerViewAdapter(): PagingDataAdapter<Photo, RecyclerViewAdapter.MyView
         }
 
     }
+}
+
+interface WallpaperInteractionListener {
+    fun onClickItem(data: Photo, view: View)
 }

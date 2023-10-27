@@ -9,5 +9,20 @@
         android:id="@+id/wallpaperListFragment"
         android:name="com.example.wallpapersapp.ui.fragments.WallpaperListFragment"
         android:label="fragment_wallpaper_list"
-        tools:layout="@layout/fragment_wallpaper_list" />
+        tools:layout="@layout/fragment_wallpaper_list" >
+        <action
+            android:id="@+id/action_wallpaperListFragment_to_downloadFragment"
+            app:destination="@id/downloadFragment"
+            app:popUpTo="@id/wallpaperListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.example.wallpapersapp.ui.fragments.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" >
+        <argument
+            android:name="image"
+            app:argType="string" />
+    </fragment>
 </navigation>

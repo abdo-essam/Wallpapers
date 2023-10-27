@@ -1,5 +1,6 @@
 package com.example.wallpapersapp.ui.fragments
 
+
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
@@ -11,9 +12,8 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate)
-{
-    override var recyclerViewAdapter: RecyclerViewAdapter = RecyclerViewAdapter()
+class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
+    override var recyclerViewAdapter: RecyclerViewAdapter = RecyclerViewAdapter(this)
     private val viewModel: HomeViewModel by viewModels()
     override fun initViewModel() {
         lifecycleScope.launch {
@@ -28,6 +28,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         binding.rvHomeFragment.layoutManager = layoutManager
         binding.rvHomeFragment.adapter = recyclerViewAdapter
     }
+
 
 
 }

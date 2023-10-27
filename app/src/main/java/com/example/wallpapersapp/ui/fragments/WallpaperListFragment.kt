@@ -14,6 +14,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class WallpaperListFragment : Fragment() {
 
+    // TODO:  here i deleted two categories
     private val tabTitles = listOf("Home","Categories")
     private val fragments = listOf(
         HomeFragment(),
