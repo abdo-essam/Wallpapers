@@ -39,12 +39,18 @@ class BottomSheetFragment(private val wallUrl :String) : BottomSheetDialogFragme
 
         binding.downLoadFromNet.setOnClickListener {
             downloadImageFromWeb(wallUrl)
+            // Dismiss the BottomSheetDialogFragment.
+            dismiss()
         }
         binding.setAsBackground.setOnClickListener {
             setAsBackground(Constants.BackGroundState.backGround)
+            // Dismiss the BottomSheetDialogFragment.
+            dismiss()
         }
         binding.setAsLockscreen.setOnClickListener {
             setAsBackground(Constants.BackGroundState.lockScreen)
+            // Dismiss the BottomSheetDialogFragment.
+            dismiss()
         }
     }
 

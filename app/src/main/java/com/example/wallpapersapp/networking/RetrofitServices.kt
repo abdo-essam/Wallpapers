@@ -20,15 +20,11 @@ interface RetrofitServices {
         @Query("page") page: Int,
     ): WallpapersResponse
 
-    @GET("category")
-    suspend fun getCategoryResponse(
-        @Query("page") page: Int?,
-        @Query("category") category: String
-    ): WallpapersResponse
 
-//    @GET("search")
-//    suspend fun getSearchResults(
-//        @Query("query") query: String,
-//        @Query("page") page: Int,
-//    ): WallpapersResponse
+    @Headers("Authorization: " + Apikey.API_KEY)
+    @GET("search")
+    suspend fun getCategoryResponse(
+        @Query("page") page: Int,
+        @Query("query") query: String
+    ): WallpapersResponse
 }

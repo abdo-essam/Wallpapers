@@ -6,27 +6,25 @@ import com.example.wallpapersapp.model.Photo
 import com.example.wallpapersapp.networking.RetrofitServices
 
 
-class CategoryPagingSource (private val apiService: RetrofitServices, private val category : String) :
-    PagingSource<Int,Photo>() {
+class CategoryPagingSource(private val apiService: RetrofitServices, private val category: String) :
+    PagingSource<Int, Photo>() {
     override fun getRefreshKey(state: PagingState<Int, Photo>): Int? {
-        return state.anchorPosition?.let { anchorPosition ->
-            val anchorPage = state.closestPageToPosition(anchorPosition)
-            anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)
-        }
+        return state.anchorPosition
     }
-
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Photo> {
         return try {
             val nextPage = params.key ?: FIRST_PAGE_INDEX
-            val responsePopular = apiService.getCategoryResponse(nextPage,category)
+            val responseCategory = apiService.getCategoryResponse(nextPage, category)
+            //Log.d("main123",responseCategory.photos.toString())
             LoadResult.Page(
-                data = responsePopular.photos,
-                prevKey = null,
-                nextKey = nextPage+1,
+                data = responseCategory.photos,
+                prevKey = if (nextPage == 1) null else nextPage - 1,
+                nextKey = nextPage + 1,
             )
 
         } catch (e: Exception) {
+            //Log.d("main123",e.toString())
             LoadResult.Error(e)
         }
     }

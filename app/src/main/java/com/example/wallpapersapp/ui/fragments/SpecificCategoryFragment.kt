@@ -101,7 +101,7 @@ class SpecificCategoryFragment : Fragment(), WallpaperInteractionListener {
 
 
     override fun onClickItem(data: Photo, view: View) {
-        val imageData = data.url
+        val imageData = data.src.large
         Navigation.findNavController(view)
             .navigate(
                 SpecificCategoryFragmentDirections.actionSpecificCategoryFragmentToDownloadFragment(
@@ -114,7 +114,6 @@ class SpecificCategoryFragment : Fragment(), WallpaperInteractionListener {
         binding.categoryName.onRightDrawableClicked {
             Navigation.findNavController(it).popBackStack()
         }
-
     }
 
 

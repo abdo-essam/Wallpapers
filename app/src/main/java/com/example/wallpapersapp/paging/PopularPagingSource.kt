@@ -16,13 +16,14 @@ class PopularPagingSource(
         return try {
             val nextPage = params.key ?: FIRST_PAGE_INDEX
             val responsePopular = apiService.getPopularResponse(nextPage)
+            //Log.d("main123",responsePopular.photos.toString())
             LoadResult.Page(
                 data = responsePopular.photos,
                 prevKey = if (nextPage == 1) null else nextPage - 1,
                 nextKey = nextPage + 1
             )
         } catch (e: Exception) {
-
+            //Log.d("main123",e.toString())
             LoadResult.Error(e)
         }
     }

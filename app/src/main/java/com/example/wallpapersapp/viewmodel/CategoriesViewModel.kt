@@ -29,7 +29,7 @@ class CategoriesViewModel constructor(private var categoryID: String) : ViewMode
 
     private fun loadCategoryToRandom(category: String): Flow<PagingData<Photo>> {
 
-        return Pager(config = PagingConfig(pageSize = 30),
+        return Pager(config = PagingConfig(pageSize = 40),
             pagingSourceFactory = { CategoryPagingSource(repository.retroService(), category) }
         ).flow.cachedIn(viewModelScope)
     }
