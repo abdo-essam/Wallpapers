@@ -8,7 +8,7 @@ import com.example.wallpapersapp.databinding.FragmentPopularBinding
 import com.example.wallpapersapp.ui.fragments.base.BaseFragment
 import com.example.wallpapersapp.ui.recyclerView.RecyclerViewAdapter
 import com.example.wallpapersapp.ui.recyclerView.WallpaperInteractionListener
-import com.example.wallpapersapp.ui.viewmodel.PopularViewModel
+import com.example.wallpapersapp.viewmodel.PopularViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

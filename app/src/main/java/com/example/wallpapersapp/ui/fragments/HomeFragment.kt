@@ -10,7 +10,7 @@ import com.example.wallpapersapp.databinding.FragmentHomeBinding
 import com.example.wallpapersapp.paging.loadingState.LoadStateAdapter
 import com.example.wallpapersapp.ui.fragments.base.BaseFragment
 import com.example.wallpapersapp.ui.recyclerView.RecyclerViewAdapter
-import com.example.wallpapersapp.ui.viewmodel.HomeViewModel
+import com.example.wallpapersapp.viewmodel.HomeViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

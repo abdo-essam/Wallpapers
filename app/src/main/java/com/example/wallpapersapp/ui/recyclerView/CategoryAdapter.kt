@@ -9,7 +9,7 @@ import com.example.wallpapersapp.R
 import com.example.wallpapersapp.databinding.CategoryItemRowBinding
 import com.example.wallpapersapp.model.Category
 
-class CategoryAdapter(private val categoryList: List<Category>): RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
+class CategoryAdapter(private val categoryList: List<Category> , private val listener: CategoryInteractionListener): RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
     inner class CategoryViewHolder(view:View) : RecyclerView.ViewHolder(view){
         val binding = CategoryItemRowBinding.bind(view)
     }
@@ -30,6 +30,10 @@ class CategoryAdapter(private val categoryList: List<Category>): RecyclerView.Ad
                 .centerCrop()
                 .error(R.drawable.baseline_error_24)
                 .into(ivCategory)
+        }
+
+        holder.binding.ivCategory.setOnClickListener {
+            listener.onClickCategory(currentCategory, it)
         }
     }
 }

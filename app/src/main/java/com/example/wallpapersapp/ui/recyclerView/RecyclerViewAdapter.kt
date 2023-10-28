@@ -55,6 +55,3 @@ class RecyclerViewAdapter(private val listener: WallpaperInteractionListener): P
     }
 }
 
-interface WallpaperInteractionListener {
-    fun onClickItem(data: Photo, view: View)
-}

@@ -1,4 +1,4 @@
-package com.example.wallpapersapp.ui.viewmodel
+package com.example.wallpapersapp.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

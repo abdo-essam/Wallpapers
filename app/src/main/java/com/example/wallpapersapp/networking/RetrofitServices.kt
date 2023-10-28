@@ -20,11 +20,11 @@ interface RetrofitServices {
         @Query("page") page: Int,
     ): WallpapersResponse
 
-/*    @GET("category")
-    suspend fun getCategoryFromApi(
+    @GET("category")
+    suspend fun getCategoryResponse(
         @Query("page") page: Int?,
         @Query("category") category: String
-    ): WallpapersResponse*/
+    ): WallpapersResponse
 
 //    @GET("search")
 //    suspend fun getSearchResults(
