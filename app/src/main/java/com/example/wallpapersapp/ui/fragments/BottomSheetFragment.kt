@@ -67,10 +67,10 @@ class BottomSheetFragment(private val wallUrl :String) : BottomSheetDialogFragme
                     .setMimeType("image/*")
                     .setAllowedOverRoaming(false)
                     .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                    .setTitle("wool")
+                    .setTitle("image")
                     .setDestinationInExternalPublicDir(
                         Environment.DIRECTORY_PICTURES,
-                        File.separator + "wool" + ".jpg",
+                        File.separator + "image" + ".jpg",
                     )
 
             }
