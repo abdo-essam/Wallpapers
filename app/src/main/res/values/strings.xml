@@ -5,4 +5,5 @@
     <string name="set_as_background">Set as Background</string>
     <string name="set_as_lockscreen">Set as Lockscreen</string>
     <string name="download_image">Download</string>
+    <string name="retry">retry</string>
 </resources>

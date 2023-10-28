@@ -76,4 +76,9 @@ dependencies {
 
     //paging 3
     implementation 'androidx.paging:paging-runtime:3.3.0-alpha02'
+
+
+    //progress bar
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
 }
