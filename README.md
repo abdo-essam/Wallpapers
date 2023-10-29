@@ -1,3 +1,4 @@
+# Wallpapers
 A Wallpaper app using Pexels Api to search, view and download thousands of wallpapers and set it on your phone as wallpaper or in gallery.
 
 ## 🏗️ Built using
